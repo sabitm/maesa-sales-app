@@ -1,8 +1,8 @@
-package com.example.salesapp.service;
+package com.example.salesapp.api;
 
 import android.content.SharedPreferences;
 
-import com.example.salesapp.model.Token;
+import com.example.salesapp.model.AccessToken;
 
 public class TokenManager {
     private SharedPreferences prefs;
@@ -22,7 +22,7 @@ public class TokenManager {
         return INSTANCE;
     }
 
-    public void saveToken(Token token) {
+    public void saveToken(AccessToken token) {
         editor.putString("API_TOKEN", token.getToken()).commit();
     }
 
@@ -30,8 +30,8 @@ public class TokenManager {
         editor.remove("API_TOKEN").commit();
     }
 
-    public Token getToken() {
-        Token token = new Token();
+    public AccessToken getToken() {
+        AccessToken token = new AccessToken();
         token.setToken(prefs.getString("API_TOKEN", null));
         return token;
     }

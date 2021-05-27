@@ -5,20 +5,12 @@
     android:width="888dp"
     android:height="136dp"
     android:viewportWidth="888"
-    android:viewportHeight="136"
-    >
-
+    android:viewportHeight="136">
     <group>
-
         <clip-path
-            android:pathData="M60 0H828C861.137 0 888 26.8629 888 60V76C888 109.137 861.137 136 828 136H60C26.8629 136 0 109.137 0 76V60C0 26.8629 26.8629 0 60 0Z"
-            />
-
+            android:pathData="M60 0H828C861.137 0 888 26.8629 888 60V76C888 109.137 861.137 136 828 136H60C26.8629 136 0 109.137 0 76V60C0 26.8629 26.8629 0 60 0Z" />
         <path
             android:pathData="M0 0V136H888V0"
-            android:fillColor="#F5F5F7"
-            />
-
+            android:fillColor="#F5F5F7" />
     </group>
-
 </vector>

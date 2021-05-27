@@ -1,4 +1,4 @@
-package com.example.salesapp.service;
+package com.example.salesapp.api;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

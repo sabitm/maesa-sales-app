@@ -4,70 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/Tvuserfoto"
-        android:layout_width="628px"
-        android:layout_height="628px"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="154px"
-        android:src="#C4C4C4"/>
-    <EditText
-        android:id="@+id/Etlogin"
-        android:layout_marginTop="153px"
-        android:layout_width="888px"
-        android:layout_height="136px"
-        android:shadowRadius="60px"
-        android:shadowColor="#F5F5F7"
-        android:layout_below="@+id/Tvuserfoto"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/edittext_login"
-        android:hint="Username"
-        android:paddingStart="78px"
-        android:inputType="text"/>
-    <EditText
-        android:id="@+id/EtPassword"
-        android:layout_marginTop="91px"
-        android:layout_width="888px"
-        android:layout_height="136px"
-        android:shadowRadius="60px"
-        android:layout_below="@+id/Etlogin"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/edittext_login"
-        android:hint="Password"
-        android:paddingStart="78px"
-        android:inputType="textPassword"/>
-    <Button
-        android:id="@+id/Btnlogin"
-        android:layout_width="888px"
-        android:layout_height="136px"
-        android:background="@drawable/button"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/EtPassword"
-        android:layout_marginTop="90px"
-        android:text="Log In "
-        android:textSize="48px"
-        android:fontFamily="@font/poppins"
-        android:textColor="#FFFFFF" />
-    <TextView
-        android:id="@+id/forgot_pass"
-        android:layout_below="@+id/Btnlogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84px"
-        android:textColor="#808080"
-        android:text="Forgot Password?"
-        android:textSize="36px"
-        android:fontFamily="@font/poppins"
-        android:layout_centerHorizontal="true"/>
-    <TextView
-        android:id="@+id/this_apps_d"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/forgot_pass"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="153px"
-        android:text="This apps developed by Maesa Engineer"
-        android:fontFamily="@font/poppins"
-        android:textColor="#808080"/>
+    android:background="@color/white"
+    tools:context=".activity.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circle_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="#C4C4C4"/>
+
+            <EditText
+                android:id="@+id/edit_text_email"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:paddingLeft="20dp"
+                android:shadowColor="#F5F5F7"
+                android:layout_below="@+id/circle_image_view"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/edittext_login"
+                android:hint="Email"
+                android:inputType="text"/>
+
+            <EditText
+                android:id="@+id/edit_text_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:layout_below="@+id/edit_text_email"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/edittext_login"
+                android:hint="Password"
+                android:inputType="textPassword"/>
+
+            <Button
+                android:id="@+id/button_login"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/button"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/edit_text_password"
+                android:layout_marginTop="30dp"
+                android:text="Login "
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/text_view_forgot_password"
+                android:layout_below="@+id/button_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textColor="#808080"
+                android:text="Forgot Password?"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_view_forgot_password"
+                android:layout_centerHorizontal="true"
+                android:text="This apps developed by Maesa Engineer"
+                android:fontFamily="@font/poppins"
+                android:textColor="#808080"
+                android:layout_marginTop="50dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/progress_bar_login"
+        android:visibility="gone"
+        layout="@layout/layout_progress_bar_login"/>
+
 </RelativeLayout>

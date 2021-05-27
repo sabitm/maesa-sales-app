@@ -1,17 +1,18 @@
-package com.example.salesapp.service;
+package com.example.salesapp.api;
 
 import androidx.annotation.Nullable;
 
-import com.example.salesapp.model.Token;
+import com.example.salesapp.model.AccessToken;
 
 import java.io.IOException;
 
+import okhttp3.Authenticator;
 import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.Route;
 import retrofit2.Call;
 
-public class CustomAuthenticator {
+public class CustomAuthenticator implements Authenticator {
     private TokenManager tokenManager;
     private static CustomAuthenticator INSTANCE;
 
@@ -34,14 +35,14 @@ public class CustomAuthenticator {
             return null;
         }
 
-        Token token = tokenManager.getToken();
+        AccessToken token = tokenManager.getToken();
 
         ApiService service = RetrofitBuilder.createService(ApiService.class);
-        Call<Token> call = service.refresh(token.getApi_token_refresh() + "a");
-        retrofit2.Response<Token> res = call.execute();
+        Call<AccessToken> call = service.refresh(token.getTokenRefresh() + "a");
+        retrofit2.Response<AccessToken> res = call.execute();
 
         if (res.isSuccessful()) {
-            Token newToken = res.body();
+            AccessToken newToken = res.body();
             tokenManager.saveToken(newToken);
 
             return response.request().newBuilder().header("Authorization", "Bearer " + res.body().getToken()).build();
@@ -57,5 +58,4 @@ public class CustomAuthenticator {
         }
         return result;
     }
-
 }

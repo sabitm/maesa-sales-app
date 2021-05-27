@@ -1,10 +1,12 @@
-package com.example.salesapp;
+package com.example.salesapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Forgot_Password extends AppCompatActivity {
+import com.example.salesapp.R;
+
+public class ForgotPasswordActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
