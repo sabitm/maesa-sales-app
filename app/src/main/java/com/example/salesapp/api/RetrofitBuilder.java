@@ -8,7 +8,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitBuilder {
 
-    private static final String BASE_URL = "https://sales-app.duatanganindonesia.com/api/";
+    public static final String BASE_URL = "https://sales-app.duatanganindonesia.com/api/";
+    public static final String BASE_URL_IMAGES = "https://sales-app.duatanganindonesia.com/storage/";
 
     private final static OkHttpClient client = buildClient();
     private final static Retrofit retrofit = buildRetrofit(client);

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.salesapp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,12 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".adapter.HistoryTransactionsAdapter"></activity>
+        <activity android:name=".adapter.CartAdapter" />
+        <activity android:name=".activity.CartActivity" />
+        <activity android:name=".adapter.ProductAdapter" />
         <activity
-            android:name=".activity.HomeActivity"
-            android:screenOrientation="portrait"/>
+            android:name=".activity.NavigationActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.ForgotPasswordActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.LoginActivity"
             android:screenOrientation="portrait">

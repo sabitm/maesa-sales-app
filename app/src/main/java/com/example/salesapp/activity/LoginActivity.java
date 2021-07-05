@@ -73,15 +73,8 @@ public class LoginActivity extends AppCompatActivity {
                 Log.w(TAG, "onResponse: " + response);
                 if (response.isSuccessful()) {
                     tokenManager.saveToken(response.body().getData());
-                    startActivity(new Intent(self, HomeActivity.class));
+                    startActivity(new Intent(self, NavigationActivity.class));
                     finish();
-                }else {
-                    try {
-                        JSONObject jObjError = new JSONObject(response.errorBody().string());
-                        Toast.makeText(self, jObjError.getString("message"), Toast.LENGTH_LONG).show();
-                    } catch (Exception e) {
-                        Toast.makeText(self, e.getMessage(), Toast.LENGTH_LONG).show();
-                    }
                 }
                 mProgressBar.setVisibility(View.GONE);
                 mCycleProgressBar.setVisibility(View.GONE);
@@ -109,7 +102,7 @@ public class LoginActivity extends AppCompatActivity {
     private void setupService() {
         tokenManager = TokenManager.getInstance(getSharedPreferences("prefs", MODE_PRIVATE));
         if (tokenManager.getToken().getToken() != null) {
-            startActivity(new Intent(self, HomeActivity.class));
+            startActivity(new Intent(self, NavigationActivity.class));
             finish();
         }
         service = RetrofitBuilder.createService(ApiService.class);

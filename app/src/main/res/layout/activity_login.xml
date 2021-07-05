@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,86 +8,80 @@
     android:background="@color/white"
     tools:context=".activity.LoginActivity">
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="20dp">
 
-        <RelativeLayout
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circle_image_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="20dp">
+            android:layout_height="150dp"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="#C4C4C4"/>
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/circle_image_view"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="50dp"
-                android:layout_centerHorizontal="true"
-                android:src="#C4C4C4"/>
+        <EditText
+            android:id="@+id/edit_text_email"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="20dp"
+            android:shadowColor="#F5F5F7"
+            android:layout_below="@+id/circle_image_view"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/edittext_login"
+            android:hint="Email"
+            android:inputType="text"/>
 
-            <EditText
-                android:id="@+id/edit_text_email"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_marginTop="30dp"
-                android:paddingLeft="20dp"
-                android:shadowColor="#F5F5F7"
-                android:layout_below="@+id/circle_image_view"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/edittext_login"
-                android:hint="Email"
-                android:inputType="text"/>
+        <EditText
+            android:id="@+id/edit_text_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:layout_below="@+id/edit_text_email"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/edittext_login"
+            android:hint="Password"
+            android:inputType="textPassword"/>
 
-            <EditText
-                android:id="@+id/edit_text_password"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="20dp"
-                android:layout_below="@+id/edit_text_email"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/edittext_login"
-                android:hint="Password"
-                android:inputType="textPassword"/>
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/button"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/edit_text_password"
+            android:layout_marginTop="30dp"
+            android:text="Login "
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins"
+            android:textColor="#FFFFFF" />
 
-            <Button
-                android:id="@+id/button_login"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/button"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/edit_text_password"
-                android:layout_marginTop="30dp"
-                android:text="Login "
-                android:textAllCaps="false"
-                android:fontFamily="@font/poppins"
-                android:textColor="#FFFFFF" />
+        <TextView
+            android:id="@+id/text_view_forgot_password"
+            android:layout_below="@+id/button_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColor="#808080"
+            android:text="Forgot Password?"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins"
+            android:layout_centerHorizontal="true"/>
 
-            <TextView
-                android:id="@+id/text_view_forgot_password"
-                android:layout_below="@+id/button_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:textColor="#808080"
-                android:text="Forgot Password?"
-                android:textSize="14sp"
-                android:fontFamily="@font/poppins"
-                android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="This apps developed by Maesa Engineer"
+            android:fontFamily="@font/poppins"
+            android:textColor="#808080"
+            android:layout_marginTop="50dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/text_view_forgot_password"
-                android:layout_centerHorizontal="true"
-                android:text="This apps developed by Maesa Engineer"
-                android:fontFamily="@font/poppins"
-                android:textColor="#808080"
-                android:layout_marginTop="50dp"/>
-
-        </RelativeLayout>
-
-    </ScrollView>
+    </RelativeLayout>
 
     <include
         android:id="@+id/progress_bar_login"
