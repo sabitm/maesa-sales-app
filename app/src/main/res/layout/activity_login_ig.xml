@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity">
+
+    <TextView
+        android:id="@+id/ig_login_lang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="English (United States)" />
+
+    <ImageView
+        android:id="@+id/ig_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@+id/ig_login_lang"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/ig_logo" />
+
+    <TextView
+        android:id="@+id/ig_login_fb"
+        android:layout_width="280dp"
+        android:layout_height="27dp"
+        android:layout_below="@id/ig_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="#3897f0"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="Continue with Facebook" />
+
+    <TextView
+        android:id="@+id/ig_text_or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ig_login_fb"
+        android:text="OR" />
+
+    <EditText
+        android:id="@+id/ig_edittext_uname"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/ig_text_or"
+        android:layout_marginTop="20dp"
+        android:paddingStart="15dp"
+        android:background="@drawable/edittext_login"
+        android:layout_centerHorizontal="true"
+        android:textSize="13dp"
+        android:hint="Phone number, username, or email" />
+
+    <EditText
+        android:id="@+id/ig_edittext_pword"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/ig_edittext_uname"
+        android:layout_marginTop="5dp"
+        android:paddingStart="15dp"
+        android:background="@drawable/edittext_login"
+        android:layout_centerHorizontal="true"
+        android:textSize="13dp"
+        android:hint="Password" />
+
+    <TextView
+        android:id="@+id/ig_button_login"
+        android:layout_width="280dp"
+        android:layout_height="27dp"
+        android:layout_below="@id/ig_edittext_pword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="#3897f0"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="Log in" />
+
+    <TextView
+        android:id="@+id/ig_button_forgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ig_button_login"
+        android:textColor="#3897f0"
+        android:text="Forgot password?" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="Don't have an account? Sign Up" />
+
+</RelativeLayout>
