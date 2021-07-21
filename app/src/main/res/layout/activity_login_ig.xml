@@ -30,7 +30,7 @@
         android:layout_below="@id/ig_logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:background="#3897f0"
+        android:background="@drawable/button_blue_ig"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -64,7 +64,7 @@
         android:layout_below="@id/ig_text_or"
         android:layout_marginTop="20dp"
         android:paddingStart="15dp"
-        android:background="@drawable/edittext_login"
+        android:background="@drawable/edittext_login_ig"
         android:layout_centerHorizontal="true"
         android:textSize="13dp"
         android:hint="Phone number, username, or email" />
@@ -76,7 +76,7 @@
         android:layout_below="@id/ig_edittext_uname"
         android:layout_marginTop="5dp"
         android:paddingStart="15dp"
-        android:background="@drawable/edittext_login"
+        android:background="@drawable/edittext_login_ig"
         android:layout_centerHorizontal="true"
         android:textSize="13dp"
         android:hint="Password" />
@@ -88,7 +88,7 @@
         android:layout_below="@id/ig_edittext_pword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:background="#3897f0"
+        android:background="@drawable/button_blue_ig"
         android:gravity="center"
         android:textColor="@color/white"
         android:text="Log in" />
